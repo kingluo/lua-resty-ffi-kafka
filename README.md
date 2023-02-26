@@ -1,6 +1,33 @@
 # lua-resty-ffi-kafka
 The openresty kafka client library that encapsulates kafka-go
 
+## Quickstart
+
+[Install lua-resty-ffi first.](https://github.com/kingluo/lua-resty-ffi#install-lua-resty-ffi-via-luarocks)
+
+```bash
+# download and build
+cd /opt
+git clone https://github.com/kingluo/lua-resty-ffi-kafka
+cd lua-resty-ffi-kafka
+make
+
+# start kafka container
+cd demo
+docker compose up -d
+
+# create topic
+python3 create-topic.py
+
+# start nginx
+mkdir logs
+LD_LIBRARY_PATH=/opt/lua-resty-ffi-kafka/:/usr/local/lib/lua/5.1 \
+nginx -p $PWD -c nginx.conf
+
+# test sync send
+curl http://localhsot:20000/send?cnt=1
+```
+
 ## Background
 
 lua-resty-kafka has below issues:

@@ -30,7 +30,7 @@ curl http://localhsot:20000/send?cnt=1
 
 ## Background
 
-lua-resty-kafka has below issues:
+[lua-resty-kafka](https://github.com/doujiang24/lua-resty-kafka) has below issues:
 
 * the author do not maintain the project positively anymore
 * features missing

@@ -16,6 +16,7 @@ lua-resty-kafka has below issues:
 * bugs
   * no necessary metadata refresh ahead of send/receive
   * code reentrancy problem (e.g. concurrent sync sends)
+  * ...
 
 [kafka-go](https://github.com/segmentio/kafka-go) is a popular and active kafka client library.
 
